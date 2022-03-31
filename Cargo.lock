@@ -5,12 +5,3 @@ version = 3
 [[package]]
 name = "headers"
 version = "0.1.0"
-dependencies = [
- "read_input",
-]
-
-[[package]]
-name = "read_input"
-version = "0.8.6"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "2f178674da3d005db760b30d6735a989d692da37b86337daec6f2e311223d608"
