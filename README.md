@@ -4,7 +4,7 @@ Generate perfect constant width source code headers every time.
 
 ## Usage
 
-```sh                                                                                                                             
+```sh
 λ ./headers "testing 123"
 ```
 
@@ -13,6 +13,8 @@ Generate perfect constant width source code headers every time.
                            TESTING 123
 //////////////////////////////////////////////////////////////*/
 ```
+
+It will also copy the header to your clipboard automatically.
 
 ## Credits
 
