@@ -1,6 +1,6 @@
 # headers
 
-Generate perfect constant width source code headers every time.
+Generate perfect code headers every time.
 
 ## Usage
 
