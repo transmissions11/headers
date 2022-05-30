@@ -1,28 +1,48 @@
 use std::env;
 
-use clipboard::{ClipboardContext, ClipboardProvider};
+struct Header {
+    top_block: String,
+    bottom_block: String,
+    padding: String,
+    input: String,
+}
+
+impl Header {
+    fn new(input: String, character: char) -> Header {
+        let mut top_block = String::from("/*");
+        let mut bottom_block = String::new();
+
+        let mut i = 0;
+        while i < 64 {
+            top_block.push(character);
+            bottom_block.push(character);
+            i += 1;
+        }
+
+        bottom_block.push_str("*/");
+
+        let mut space = String::from("");
+
+        for _i in 1..(top_block.len() - input.len()) / 2 {
+            space.push(' ')
+        }
+
+        Header {
+            top_block,
+            bottom_block,
+            padding: space,
+            input: input.to_uppercase()
+        }
+    }
+}
 
 fn main() {
-    let input = env::args().collect::<Vec<String>>()[1..].join(" ");
+    let args: Vec<String> = env::args().collect();
 
-    let mut space = String::from("");
+    let input = &args[1];
+    let character = &args[2];
 
-    while (64 - (space.len() + input.len())) > space.len() {
-        space.push_str(" ")
-    }
+    let header = Header::new(input.to_string(), character.chars().next().unwrap());
 
-    let output = format!(
-        "{}\n{}{}{}\n{}",
-        "    /*//////////////////////////////////////////////////////////////",
-        "    ",
-        space,
-        input.to_uppercase(),
-        "    //////////////////////////////////////////////////////////////*/"
-    );
-
-    println!("{}", output); // Print the header to console.
-
-    let mut ctx: ClipboardContext = ClipboardProvider::new().unwrap();
-
-    ctx.set_contents(output).unwrap(); // Copy the header to clipboard.
+    println!("{}\n{}{}\n{}", header.top_block, header.padding, header.input, header.bottom_block);
 }
