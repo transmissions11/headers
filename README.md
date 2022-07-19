@@ -2,6 +2,17 @@
 
 Generate perfect code headers every time.
 
+## Build
+
+You need Rust and Cargo installed on your machine. See the installation guide
+[here](https://doc.rust-lang.org/cargo/getting-started/installation.html).
+
+Then clone the repo and install the CLI globally like this:
+
+```sh
+cargo install --path .
+```
+
 ## Usage
 
 ```sh
