@@ -29,7 +29,7 @@ It will also copy the header to your clipboard automatically.
 
 ### With VSCode
 
-Set your global `tasks.json` like so to add the command as task:
+Set your global [`tasks.json`](https://stackoverflow.com/questions/41046494/making-global-tasks-in-vs-code) like so to add the command as task:
 
 ```json
 {
@@ -54,7 +54,7 @@ Set your global `tasks.json` like so to add the command as task:
 }
 ```
 
-To really speed-up your workflow, you can even add a keybind for the task in `keybindings.json`:
+To really speed-up your workflow, you can even add a keybind for the task in [`keybindings.json`](https://code.visualstudio.com/docs/getstarted/keybindings):
 
 ```json
 [
