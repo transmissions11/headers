@@ -59,12 +59,14 @@ To really speed-up your workflow, you can even add a keybind for the task in `ke
 ```json
 [
   {
-    "key": "cmd+h",
+    "key": "CMD+h",
     "command": "workbench.action.tasks.runTask",
     "args": "Generate Header"
   }
 ]
 ```
+
+This will copy the generated header to your clipboard.
 
 ## Credits
 
