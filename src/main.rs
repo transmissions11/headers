@@ -5,17 +5,11 @@ use clipboard::{ClipboardContext, ClipboardProvider};
 fn main() {
     let input = env::args().collect::<Vec<String>>()[1..].join(" ");
 
-    let mut space = String::from("");
-
-    while (64 - (space.len() + input.len())) > space.len() {
-        space.push_str(" ")
-    }
-
     let output = format!(
         "{}\n{}{}{}\n{}",
         "    /*//////////////////////////////////////////////////////////////",
         "    ",
-        space,
+        (0..(64 - input.len()) / 2).map(|_| " ").collect::<String>(),
         input.to_uppercase(),
         "    //////////////////////////////////////////////////////////////*/"
     );
