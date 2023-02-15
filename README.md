@@ -41,7 +41,8 @@ Set your global [`tasks.json`](https://stackoverflow.com/questions/41046494/maki
       "command": "headers ${input:header}",
       "presentation": {
         "reveal": "never"
-      }
+      },
+      "problemMatcher": []
     }
   ],
   "inputs": [
